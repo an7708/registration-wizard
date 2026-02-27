@@ -1,16 +1,165 @@
-# React + Vite
+# The Registration Wizard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-step onboarding form built with modern React best practices.  
+This project simulates a real-world registration flow similar to setting up a SaaS account or online banking profile.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+Long forms reduce user engagement. Modern applications improve UX by breaking large forms into smaller, manageable steps.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The Registration Wizard demonstrates:
 
-## Expanding the ESLint configuration
+- Controlled multi-step navigation
+- Centralized state management
+- Real-time form validation
+- Schema-based validation using industry-standard tools
+- Clean and responsive UI with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Live Features
+
+### Multi-Step Form Structure
+
+**Step 1 – Personal Information**
+- First Name
+- Last Name
+- Date of Birth
+
+**Step 2 – Account Details**
+- Email
+- Password
+- Confirm Password
+
+**Step 3 – Review & Submit**
+- Displays all collected information
+- Final submission confirmation screen
+
+---
+
+## Technical Implementation
+
+### Level 1 – Core Logic
+- Conditional rendering of step components
+- Parent-managed state
+- Data persistence between steps
+- Navigation using Next and Back buttons
+- Final submission logs full data object and displays success screen
+
+---
+
+### Level 2 – Validation & UX Enhancements
+- Real-time input validation
+- Email format validation
+- Password minimum length (8 characters)
+- Confirm password match validation
+- Disabled Next button until current step is valid
+- Show/Hide password toggle
+- Visual progress bar with dynamic percentage
+
+---
+
+### Level 3 – Industry Standard Implementation
+
+This project implements enterprise-level form handling using:
+
+- `react-hook-form`
+- `zod`
+- `@hookform/resolvers`
+- `Tailwind CSS`
+
+#### Why React Hook Form?
+- Minimal re-renders
+- High performance
+- Cleaner validation handling
+- Scalable architecture
+
+#### Why Zod?
+- Schema-based validation
+- Centralized validation logic
+- Type-safe constraints
+- Clean error messaging
+
+---
+
+## Tech Stack
+
+- React
+- Vite
+- React Hook Form
+- Zod
+- Tailwind CSS
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/registration-wizard.git
+```
+
+Navigate into the project:
+
+```bash
+cd registration-wizard
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Project Structure
+
+```
+src/
+ ├── components/
+ │   ├── Step1.jsx
+ │   ├── Step2.jsx
+ │   ├── Step3.jsx
+ │   ├── ProgressBar.jsx
+ │   └── Success.jsx
+ ├── Schemas/
+ │   └── registerSchema.js
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## Key Learning Outcomes
+
+- Multi-step form architecture
+- State persistence across conditional renders
+- Schema-driven validation
+- Controlled form UX patterns
+- Enterprise-ready form handling
+
+---
+
+## Future Improvements
+
+- API integration for real submission
+- Form reset functionality
+- Animations between steps
+- Accessibility improvements
+- Unit testing with React Testing Library
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.
